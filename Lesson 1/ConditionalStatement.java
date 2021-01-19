@@ -23,10 +23,10 @@ public class ConditionalStatement {
         char firstLetterName = 'A';
         if(firstLetterName == 'M') {
             System.out.println("Имя на M");
-        } else if (firstLetterName == 'I') {
+      } else if (firstLetterName == 'I') {
             System.out.println("Имя на I");
-            } else {
-                System.out.println("Имя не на M и не на I");
+      } else {
+            System.out.println("Имя не на M и не на I");
             }
     }
 }
