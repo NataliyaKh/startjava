@@ -19,7 +19,7 @@ public class Cycle {
                 sum += k;
             }
             k++;
-        } while(k <= 20);
+        } while (k <= 20);
         System.out.println("Результат сложения " + sum);
     }
 }
