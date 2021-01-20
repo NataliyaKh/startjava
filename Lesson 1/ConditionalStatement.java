@@ -16,17 +16,17 @@ public class ConditionalStatement {
         float height = 1.75f;
         if(height < 1.80) {
             System.out.println("Средний рост");
-      } else {
+        } else {
                 System.out.println("Высокиий рост");
-             }
+        }
         
         char firstLetterName = 'A';
         if(firstLetterName == 'M') {
             System.out.println("Имя на M");
-      } else if (firstLetterName == 'I') {
+        } else if (firstLetterName == 'I') {
             System.out.println("Имя на I");
-      } else {
+        } else {
             System.out.println("Имя не на M и не на I");
-            }
+        }
     }
 }
