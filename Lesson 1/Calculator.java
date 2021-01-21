@@ -3,29 +3,26 @@ public class Calculator {
         int num1 = 371;
         char operation = '^';
         int num2 = 3;
+        int result;
         if (operation == '+') {
-            int sum = num1 + num2;
-            System.out.println(num1 + " + " + num2 + " = " + sum);
+            result = num1 + num2;
         } else if(operation == '+') {
-            int diff = num1 - num2;
-            System.out.println(num1 + " - " + num2 + " = " + diff);
+            result = num1 - num2;
         } else if(operation == '*') {
-            int product = num1 * num2;
-            System.out.println(num1 + " * " + num2 + " = " + product);
+            result = num1 * num2;
         } else if(operation == '/') {
-            int fraction = num1 / num2;
-            System.out.println(num1 + " / " + num2 + " = " + fraction);
+            result = num1 / num2;
         } else if(operation == '^') {
-            int power = 1;
-            int exponent = 1;
-            do {
-            power = power * num1;
-            exponent++;
-            } while (exponent <= num2); 
-            System.out.println(num1 + " ^ " + num2 + " = " + power);
+            result = 1;
+            for (int exponent=1; exponent <= num2; exponent++) {
+                result = result * num1;
+                } 
         } else if(operation == '%') {
-            int remainder = num1 % num2;
-            System.out.println(num1 + " % " + num2 + " = " + remainder);
+            result = num1 % num2;
+        } else {
+            result = 0;
+            System.out.println("Знак математической операции некорректен");
         }
+        System.out.println(num1 + " " + operation + " " + num2 + " = " + result);
     }
 }
