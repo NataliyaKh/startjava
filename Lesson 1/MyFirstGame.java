@@ -1,17 +1,17 @@
 public class MyFirstGame {   
     public static void main(String[] args) {
         System.out.println("Угадайте число от 0 до 100!\n");
-        int num1 = 74;
-        int num2 = 82;
+        int numComputer = 74;
+        int numGuess = 82;
         do {
-            if(num2 > num1) {
-            System.out.println("Ваш вариант - " + num2 + "\nВведённое вами число больше того, что загадал компьютер.\n");
-            num2-=1;
-            } else if(num2 < num1) {
-            System.out.println("Ваш вариант - " + num2 + "\nВведённое вами число меньше того, что загадал компьютер.\n");
-            num2++;
+            if(numGuess > numComputer) {
+                System.out.println("Ваш вариант - " + numGuess + "\nВведённое вами число больше того, что загадал компьютер.\n");
+                numGuess--;
+            } else if(numGuess < numComputer) {
+                System.out.println("Ваш вариант - " + numGuess + "\nВведённое вами число меньше того, что загадал компьютер.\n");
+                numGuess++;
             }
-        } while(num2 != num1);
-        System.out.println("Ваш вариант - " + num2 + "\nВы угадали!");
+        } while(numGuess != numComputer);
+        System.out.println("Ваш вариант - " + numGuess + "\nВы угадали!");
     }
 }
