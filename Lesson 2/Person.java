@@ -7,22 +7,22 @@ public class Person {
 
     void walk() {
 
-    };
+    }
 
     void sit() {
 
-    };
+    }
 
     void run() {
 
-    };
+    }
 
     void speak() {
 
-    };
+    }
     
     boolean learnJava() {
         System.out.println("Вы изучаете Java");
         return true;
-    };
+    }
 }
