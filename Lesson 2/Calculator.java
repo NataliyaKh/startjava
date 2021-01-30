@@ -1,7 +1,7 @@
 public class Calculator {
     private int num1 = 371;
-    private int num2 = 3;
     private char operation = '^';
+    private int num2 = 3;
     private int result;
 
     public int getNum1() {
@@ -19,7 +19,7 @@ public class Calculator {
     void setNum1(int num1) {
             this.num1 = num1;
         }
-    void setName(char operation) {
+    void setOperation(char operation) {
         this.operation = operation;
     }
     void setNum2(int num2) {
@@ -29,7 +29,7 @@ public class Calculator {
         this.result = result;
     }
     
-    switch(operation) {
+    public void switch(operation) {
         case '+' : 
             result = num1 + num2;
             break;
