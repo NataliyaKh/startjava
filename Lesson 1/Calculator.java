@@ -7,7 +7,7 @@ public class Calculator {
 
         if (operation == '+') {
             result = num1 + num2;
-        } else if(operation == '+') {
+        } else if(operation == '-') {
             result = num1 - num2;
         } else if(operation == '*') {
             result = num1 * num2;
