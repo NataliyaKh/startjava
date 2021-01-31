@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class CalculatorTest {
     public static void main(String[] args) {
         Calculator.calculatorOne = new Calculator();
-            
         do {
             System.out.println("Введите первое число: ");
             Scanner scanNum1 = new Scanner(System.in);
