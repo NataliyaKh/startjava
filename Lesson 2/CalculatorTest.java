@@ -11,7 +11,7 @@ public class CalculatorTest {
 
             System.out.println("Введите знак математической операции: ");
             Scanner scanOperation = new Scanner(System.in);
-            int setOperation() = scanOperation.nextChar();
+            int setOperation() = scanOperation.next();
             System.out.println(calculatorOne.getOperation());
 
             System.out.println("Введите второе число: ");
@@ -24,7 +24,7 @@ public class CalculatorTest {
             System.out.println(num1 + " " + operation + " " + num2 + " = " + result);
             System.out.println("Хотите продолжить вычисления? да / нет ");
             Scanner scanProceed = new Scanner(System.in);
-            String proceed = scanProceed.nextString();
+            String proceed = scanProceed.next();
             System.out.println(proceed);
 
             switch(proceed) {

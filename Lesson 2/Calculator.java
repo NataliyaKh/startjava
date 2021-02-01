@@ -33,7 +33,7 @@ public class Calculator {
     void setOperation (char operation) {
         Scanner scanOperation = new Scanner(System.in);
         System.out.println("Введите знак математической операции: ");
-        char operation = scanOperation.nextChar();
+        char operation = scanOperation.next();
         switch(operation) {
             case '+' : 
                 result = num1 + num2;
@@ -59,7 +59,7 @@ public class Calculator {
             default : 
                 System.out.println("Знак математической операции некорректен");
                 return;
-        char setOperation() = scanOperation.nextChar();
+        char setOperation() = scanOperation.next();
         System.out.println(calculatorOne.getOperation());
             System.out.println(num1 + " " + operation + " " + num2 + " = " + result);
         }
