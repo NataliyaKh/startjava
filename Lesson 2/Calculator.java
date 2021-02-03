@@ -14,7 +14,7 @@ public class Calculator {
     private int num2;
     
     public int getNum2() {
-        return getNum2;
+        return num2;
     }
 
     void setNum2(int num2) {
@@ -23,7 +23,7 @@ public class Calculator {
 
     private char operation;
     
-    public void getOperation() {
+    public char getOperation() {
         return operation;
     }
 
@@ -32,39 +32,32 @@ public class Calculator {
     }
 
     private int result;
-    switch(operation) {
-        case '+' : 
-            result = num1 + num2;
-            break;
-        case '-' : 
-            result = num1 - num2;
-            break;
-        case '*' : 
-            result = num1 * num2;
-            break;
-        case '/' : 
-            result = num1 / num2;
-            break;
-        case '^' : 
-            result = 1;
-            for (int exponent = 1; exponent <= num2; exponent++) {
-                result *= num1;
-            }
-            break;
-        case '%' : 
-            result = num1 % num2;
-            break;
-        default : 
-            System.out.println("Знак математической операции некорректен");
-            return;
+    public int setResult(int result) {
+        switch(operation) {
+            case '+' : 
+                return result = num1 + num2;
+                break;
+            case '-' : 
+                return result = num1 - num2;
+                break;
+            case '*' : 
+                return result = num1 * num2;
+                break;
+            case '/' : 
+                return result = num1 / num2;
+                break;
+            case '^' : 
+                result = 1;
+                for (int exponent = 1; exponent <= num2; exponent++) {
+                    return result *= num1;
+                }
+                break;
+            case '%' : 
+                return result = num1 % num2;
+                break;
+            default : 
+                System.out.println("Знак математической операции некорректен");
+                return;
         }
-
-    public int getResult() {
-        return result;
     }
-    
-    void setResult(int result) {
-        this.result = result;
-    }
-    
 }
