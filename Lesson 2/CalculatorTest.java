@@ -3,19 +3,21 @@ import java.util.Scanner;
 public class CalculatorTest {
     public static void main(String[] args) {
         Calculator.calculatorOne = new Calculator();
+        String proceed;
+
         do {
             Scanner scan = new Scanner(System.in);
             
             System.out.println("Введите первое число: ");
-            int setNum1() = scan.nextInt();
+            int num1 = scan.nextInt();
             System.out.println(calculatorOne.getNum1());
 
             System.out.println("Введите знак математической операции: ");
-            int setOperation() = scan.next();
+            int operation = scan.next();
             System.out.println(calculatorOne.getOperation());
 
             System.out.println("Введите второе число: ");
-            int setNum2() = scan.nextInt();
+            int num2 = scan.nextInt();
             System.out.println(calculatorOne.getNum2());
 
             System.out.println(num1 + " " + operation + " " + num2 + " = " + calculatorOne.getResult());
@@ -23,8 +25,8 @@ public class CalculatorTest {
             String proceed = scan.next();
             System.out.println(proceed);
 
-            public String getProceed() {
-                switch(String proceed)
+            public String proceed(String proceed) {
+                switch(proceed) {
                     case "да" : {
                         return;
                     }
@@ -35,7 +37,8 @@ public class CalculatorTest {
                     default :
                         System.out.println("Выбранный ответ некорректен");
                         return;
+                }
             }
-        } while(proceed != "нет");
+        } while (proceed != "нет");
     }
 }
