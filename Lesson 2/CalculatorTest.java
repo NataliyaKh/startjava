@@ -1,28 +1,42 @@
 import java.util.Scanner;
 
 public class CalculatorTest {
-    Calculator calculatorOne = new Calculator();
     String proceed;
-    public static void main(String[] args) {
+    Calculator calculatorOne = new Calculator();
+
+    public int getNum1() {
+        return calculatorOne.num1;
+    }
+    
+    public int getNum2() {
+        return calculatorOne.num2;
+    }
+    
+    public char getOperation() {
+        return calculatorOne.operation;
+    }
+    
+    public void main(String[] args) {
         do {
             Scanner scan = new Scanner(System.in);
             
             System.out.println("Введите первое число: ");
-            int num1 = scan.nextInt();
-            System.out.println(calculatorOne.setNum1());
+            int calculatorOne.setNum1() = scan.nextInt();
+            System.out.println(calculatorOne.getNum1());
 
             System.out.println("Введите знак математической операции: ");
-            int operation = scan.next();
-            System.out.println(calculatorOne.setOperation());
+            char calculatorOne.setOperation() = scan.next().charAt(0);
+            System.out.println(calculatorOne.operation());
 
             System.out.println("Введите второе число: ");
-            int num2 = scan.nextInt();
-            System.out.println(calculatorOne.setNum2());
+            int calculatorOne.setNum2() = scan.nextInt();
+            System.out.println(calculatorOne.getNum2());
 
             System.out.println(num1 + " " + operation + " " + num2 + " = " + calculatorOne.getResult());
             System.out.println("Хотите продолжить вычисления? да / нет ");
             String proceed = scan.next();
             System.out.println(proceed);
+            
         } while (proceed != "нет");
     }
 
@@ -39,5 +53,6 @@ public class CalculatorTest {
                 System.out.println("Выбранный ответ некорректен");
                 return;
             }
+        return;
         }
     } 
