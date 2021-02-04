@@ -4,39 +4,30 @@ public class CalculatorTest {
     String proceed;
     Calculator calculatorOne = new Calculator();
 
-    public int getNum1() {
-        return calculatorOne.num1;
-    }
-    
-    public int getNum2() {
-        return calculatorOne.num2;
-    }
-    
-    public char getOperation() {
-        return calculatorOne.operation;
-    }
-    
     public void main(String[] args) {
         do {
             Scanner scan = new Scanner(System.in);
             
             System.out.println("Введите первое число: ");
-            int calculatorOne.setNum1() = scan.nextInt();
+            int num1 = scan.nextInt();
+            calculatorOne.setNum1(num1);
             System.out.println(calculatorOne.getNum1());
 
             System.out.println("Введите знак математической операции: ");
-            char calculatorOne.setOperation() = scan.next().charAt(0);
-            System.out.println(calculatorOne.operation());
+            char operation = scan.next().charAt(0);
+            calculatorOne.setOperation(operation);
+            System.out.println(calculatorOne.getOperation());
 
             System.out.println("Введите второе число: ");
-            int calculatorOne.setNum2() = scan.nextInt();
+            int num2 = scan.nextInt();
+            calculatorOne.setNum2(num2);
             System.out.println(calculatorOne.getNum2());
 
             System.out.println(num1 + " " + operation + " " + num2 + " = " + calculatorOne.getResult());
             System.out.println("Хотите продолжить вычисления? да / нет ");
             String proceed = scan.next();
             System.out.println(proceed);
-            
+
         } while (proceed != "нет");
     }
 
