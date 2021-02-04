@@ -54,5 +54,4 @@ public class Calculator {
         this.operation = operation;
     }
 
-    
 }
