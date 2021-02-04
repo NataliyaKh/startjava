@@ -8,29 +8,25 @@ public class Calculator {
         switch(operation) {
             case '+' : 
                 return result = num1 + num2;
-                break;
             case '-' : 
                 return result = num1 - num2;
-                break;
             case '*' : 
                 return result = num1 * num2;
-                break;
             case '/' : 
                 return result = num1 / num2;
-                break;
             case '^' : 
                 result = 1;
                 for (int exponent = 1; exponent <= num2; exponent++) {
                     return result *= num1;
                 }
-                break;
+                return result;
             case '%' : 
                 return result = num1 % num2;
-                break;
             default : 
                 System.out.println("Знак математической операции некорректен");
-                return;
-        }
+                break;
+            }
+            return result;
     }
 
     public int getNum1() {

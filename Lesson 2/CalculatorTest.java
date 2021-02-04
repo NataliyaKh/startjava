@@ -27,17 +27,17 @@ public class CalculatorTest {
     }
 
     void getProceed() {
-            switch(proceed) {
-                case "да" : {
-                    return;
-                }
-                case "нет" : {
-                    System.out.println("Вычисления окончены");
-                    break;
-                }
-                default :
-                    System.out.println("Выбранный ответ некорректен");
-                    return;
+        switch(proceed) {
+            case "да" : {
+                return;
+            }
+            case "нет" : {
+                System.out.println("Вычисления окончены");
+                break;
+            }
+            default :
+                System.out.println("Выбранный ответ некорректен");
+                return;
             }
         }
     } 
