@@ -4,7 +4,7 @@ public class Calculator {
     private int num1;
     private int num2;
     private char operation;
-    public int result(int result) {
+    public int countResult(int result) {
         switch(operation) {
             case '+' : 
                 return num1 + num2;
