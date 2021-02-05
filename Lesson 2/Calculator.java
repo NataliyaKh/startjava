@@ -7,21 +7,20 @@ public class Calculator {
     public int result(int result) {
         switch(operation) {
             case '+' : 
-                return result = num1 + num2;
+                return num1 + num2;
             case '-' : 
-                return result = num1 - num2;
+                return num1 - num2;
             case '*' : 
-                return result = num1 * num2;
+                return num1 * num2;
             case '/' : 
-                return result = num1 / num2;
+                return num1 / num2;
             case '^' : 
                 result = 1;
                 for (int exponent = 1; exponent <= num2; exponent++) {
                     return result *= num1;
                 }
-                return result;
             case '%' : 
-                return result = num1 % num2;
+                return num1 % num2;
             default : 
                 System.out.println("Знак математической операции некорректен");
                 break;
@@ -50,4 +49,10 @@ public class Calculator {
         this.operation = operation;
     }
 
+    public int getResult() {
+        return result;
+    }
+    void setResult() {
+        this.result = result;
+    }
 }
