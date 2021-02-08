@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class CalculatorTest {
     String proceed;
-    
     public void main(String[] args) {
         Calculator calculatorOne = new Calculator();
         do {
@@ -20,16 +19,16 @@ public class CalculatorTest {
             int num2 = scan.nextInt();
             calculatorOne.setNum2(num2);
 
-            int result = calculatorOne.getResult();
+            calculatorOne.getResult();
 
             System.out.println(num1 + " " + operation + " " + num2 + " = " + calculatorOne.getResult());
             System.out.println("Хотите продолжить вычисления? да / нет ");
             String proceed = scan.next();
-            System.out.println(proceed);
+            System.out.println(calculatorOne.getProceed());
         } while (proceed != "нет");
     }
 
-    void getProceed() {
+    void setProceed() {
         switch(proceed) {
             case "да" : 
                 return;
@@ -39,8 +38,7 @@ public class CalculatorTest {
             default :
                 System.out.println("Выбранный ответ некорректен");
                 return;
-        return;
-        }
+            }
+        return proceed;
     }
-
 }

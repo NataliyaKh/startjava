@@ -4,7 +4,10 @@ public class Calculator {
     private int num1;
     private int num2;
     private char operation;
-    public int countResult(int result) {
+    public int getResult() {
+        return result;
+    }
+    int setResult(int result) {
         switch(operation) {
             case '+' : 
                 return num1 + num2;
@@ -47,12 +50,5 @@ public class Calculator {
     }
     void setOperation (char operation) {
         this.operation = operation;
-    }
-
-    public int getResult() {
-        return result;
-    }
-    void setResult() {
-        this.result = result;
     }
 }
