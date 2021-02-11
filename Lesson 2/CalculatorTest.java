@@ -21,7 +21,7 @@ public class CalculatorTest {
 
             calculatorOne.countResult();
 
-            System.out.println(num1 + " " + operation + " " + num2 + " = " + calculatorOne.result());
+            System.out.println(num1 + " " + operation + " " + num2 + " = " + calculatorOne.countResult());
             System.out.println("Хотите продолжить вычисления? да / нет ");
             String proceed = scan.next();
             calculatorOne.countProceed();
