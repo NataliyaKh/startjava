@@ -43,7 +43,6 @@ public class CalculatorTest {
             }
     }
 
-    
     void setProceed(String proceed) {
         this.proceed = proceed;
     }
