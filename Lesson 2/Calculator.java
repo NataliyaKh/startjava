@@ -4,6 +4,7 @@ public class Calculator {
     private int num1;
     private int num2;
     private char operation;
+    public int result;
     
     public int countResult(int result) {
         switch(operation) {
@@ -27,6 +28,14 @@ public class Calculator {
                 break;
             }
             return result;
+    }
+
+    public int getResult() {
+        return result;
+    }
+
+    void setResult(int result) {
+        this.result = result;
     }
 
     public int getNum1() {
