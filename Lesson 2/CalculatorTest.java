@@ -24,8 +24,9 @@ public class CalculatorTest {
             System.out.println(num1 + " " + operation + " " + num2 + " = " + calculatorOne.getResult());
             System.out.println("Хотите продолжить вычисления? да / нет ");
             String proceed = scan.next();
-            calculatorOne.getProceed(proceed);
+            calculatorOne.setProceed(proceed);
             System.out.println(proceed);
+            calculatorOne.offerProceed();
         } while (proceed != "нет");
     }
 
