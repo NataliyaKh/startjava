@@ -24,12 +24,12 @@ public class CalculatorTest {
             System.out.println(num1 + " " + operation + " " + num2 + " = " + calculatorOne.getResult());
             System.out.println("Хотите продолжить вычисления? да / нет ");
             String proceed = scan.next();
-            calculatorOne.countProceed();
+            calculatorOne.getProceed(proceed);
             System.out.println(proceed);
         } while (proceed != "нет");
     }
 
-    void countProceed(String proceed) {
+    void offerProceed(String proceed) {
         switch(proceed) {
             case "да" :
                 return;
@@ -41,5 +41,13 @@ public class CalculatorTest {
                 break;
             }
         return proceed;
+    }
+
+    public String getProceed() {
+        return proceed;
+    }
+
+    void setProceed(String proceed) {
+        this.proceed = proceed;
     }
 }
