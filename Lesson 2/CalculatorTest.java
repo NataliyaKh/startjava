@@ -26,7 +26,7 @@ public class CalculatorTest {
             String proceed = scan.next();
             calculatorOne.setProceed(proceed);
             System.out.println(proceed);
-            calculatorOne.offerProceed();
+            calculatorOne.offerProceed(proceed);
         } while (proceed != "нет");
     }
 
@@ -41,13 +41,9 @@ public class CalculatorTest {
                 System.out.println("Выбранный ответ некорректен");
                 break;
             }
-        return proceed;
     }
 
-    public String getProceed() {
-        return proceed;
-    }
-
+    
     void setProceed(String proceed) {
         this.proceed = proceed;
     }
