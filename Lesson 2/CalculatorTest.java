@@ -19,25 +19,26 @@ public class CalculatorTest {
             int num2 = scan.nextInt();
             calculatorOne.setNum2(num2);
 
-            calculatorOne.getResult();
+            calculatorOne.countResult();
 
-            System.out.println(num1 + " " + operation + " " + num2 + " = " + calculatorOne.getResult());
+            System.out.println(num1 + " " + operation + " " + num2 + " = " + calculatorOne.result());
             System.out.println("Хотите продолжить вычисления? да / нет ");
             String proceed = scan.next();
-            System.out.println(calculatorOne.getProceed());
+            calculatorOne.countProceed();
+            System.out.println(proceed);
         } while (proceed != "нет");
     }
 
-    void getProceed(String proceed) {
+    void countProceed(String proceed) {
         switch(proceed) {
-            case "да" : 
+            case "да" :
                 return;
-            case "нет" : 
+            case "нет" :
                 System.out.println("Вычисления окончены");
-                break;
+                return;
             default :
                 System.out.println("Выбранный ответ некорректен");
-                return;
+                break;
             }
         return proceed;
     }
