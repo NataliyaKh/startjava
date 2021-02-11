@@ -19,10 +19,8 @@ public class CalculatorTest {
             int num2 = scan.nextInt();
             calculatorOne.setNum2(num2);
 
-            calculatorOne.countResult();
-            int result = countResult();
-            calculatorOne.setResult(result);
-
+            calculatorOne.getResult();
+            
             System.out.println(num1 + " " + operation + " " + num2 + " = " + calculatorOne.getResult());
             System.out.println("Хотите продолжить вычисления? да / нет ");
             String proceed = scan.next();
