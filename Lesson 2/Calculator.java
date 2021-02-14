@@ -5,7 +5,61 @@ public class Calculator {
     private int num2;
     private char operation;
     public int result;
-    
+    public String proceed;
+
+    public int getResult() {
+        return result;
+    }
+
+    void setResult(int result) {
+        this.result = result;
+    }
+
+    public int getNum1() {
+        return num1;
+    }
+
+    void setNum1(int num1) {
+        this.num1 = num1;
+    }
+
+    public int getNum2() {
+        return num2;
+    }
+
+    void setNum2(int num2) {
+        this.num2 = num2;
+    }
+
+    public char getOperation() {
+        return operation;
+    }
+
+    void setOperation (char operation) {
+        this.operation = operation;
+    }
+
+    public String getProceed() {
+        return proceed;
+    }
+
+    void setProceed (String proceed) {
+        this.proceed = proceed;
+    }
+
+    void offerProceed(String proceed) {
+        switch(proceed) {
+            case "да" :
+                return;
+            case "нет" :
+                System.out.println("Вычисления окончены");
+                break;
+            default :
+                System.out.println("Выбранный ответ некорректен. Введите да / нет");
+                return;
+        }
+    }
+
     public int countResult(int result) {
         switch(operation) {
             case '+' : 
@@ -27,35 +81,6 @@ public class Calculator {
                 System.out.println("Знак математической операции некорректен");
                 break;
             }
-            return result;
-    }
-
-    public int getResult() {
         return result;
-    }
-
-    void setResult(int result) {
-        this.result = result;
-    }
-
-    public int getNum1() {
-        return num1;
-    }
-    void setNum1(int num1) {
-        this.num1 = num1;
-    }
-
-    public int getNum2() {
-        return num2;
-    }
-    void setNum2(int num2) {
-        this.num2 = num2;
-    }
-
-    public char getOperation() {
-        return operation;
-    }
-    void setOperation (char operation) {
-        this.operation = operation;
     }
 }
