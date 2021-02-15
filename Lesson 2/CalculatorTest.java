@@ -26,7 +26,7 @@ public class CalculatorTest {
         } while (proceed != "нет");
     }
 
-    void offerProceed() {
+    public void offerProceed(String proceed) {
         switch(proceed) {
             case "да" :
                 return;
