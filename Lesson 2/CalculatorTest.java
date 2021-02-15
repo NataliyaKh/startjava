@@ -19,14 +19,14 @@ public class CalculatorTest {
             calculatorOne.setNum2(num2);
             
             System.out.println(num1 + " " + operation + " " + num2 + " = " + calculatorOne.calculate());
-            
             System.out.println("Хотите продолжить вычисления? да / нет ");
-            String proceed = scan.next();
             calculatorOne.offerProceed();
         } while (proceed != "нет");
     }
 
-    public void offerProceed(String proceed) {
+    public void offerProceed() {
+        Scanner scan = new Scanner(System.in);
+        String proceed = scan.next();
         switch(proceed) {
             case "да" :
                 return;
