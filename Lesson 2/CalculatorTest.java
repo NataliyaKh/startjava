@@ -17,14 +17,25 @@ public class CalculatorTest {
             System.out.println("Введите второе число: ");
             int num2 = scan.nextInt();
             calculatorOne.setNum2(num2);
-
-            calculatorOne.countResult();
             
-            System.out.println(num1 + " " + operation + " " + num2 + " = " + calculatorOne.getResult());
+            System.out.println(num1 + " " + operation + " " + num2 + " = " + calculatorOne.calculate());
+            
             System.out.println("Хотите продолжить вычисления? да / нет ");
             String proceed = scan.next();
-            calculatorOne.setProceed(proceed);
             calculatorOne.offerProceed();
         } while (proceed != "нет");
+    }
+
+    void offerProceed() {
+        switch(proceed) {
+            case "да" :
+                return;
+            case "нет" :
+                System.out.println("Вычисления окончены");
+                break;
+            default :
+                System.out.println("Выбранный ответ некорректен. Введите да / нет");
+                return;
+        }
     }
 }

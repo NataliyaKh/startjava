@@ -5,7 +5,6 @@ public class Calculator {
     private int num2;
     private char operation;
     public int result;
-    public String proceed;
 
     public int getResult() {
         return result;
@@ -39,28 +38,7 @@ public class Calculator {
         this.operation = operation;
     }
 
-    public String getProceed() {
-        return proceed;
-    }
-
-    void setProceed (String proceed) {
-        this.proceed = proceed;
-    }
-
-    void offerProceed(String proceed) {
-        switch(proceed) {
-            case "да" :
-                return;
-            case "нет" :
-                System.out.println("Вычисления окончены");
-                break;
-            default :
-                System.out.println("Выбранный ответ некорректен. Введите да / нет");
-                return;
-        }
-    }
-
-    public int countResult(int result) {
+    public int calculate() {
         switch(operation) {
             case '+' : 
                 return num1 + num2;
@@ -81,6 +59,6 @@ public class Calculator {
                 System.out.println("Знак математической операции некорректен");
                 break;
             }
-        return result;
+        return 0;
     }
 }
