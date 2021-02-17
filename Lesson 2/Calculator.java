@@ -5,6 +5,7 @@ public class Calculator {
     private int num2;
     private char operation;
     public int result;
+    public String proceed;
 
     public int getNum1() {
         return num1;
@@ -60,5 +61,20 @@ public class Calculator {
                 break;
             }
         return 0;
+    }
+
+    public void isNext() {
+        Scanner scan = new Scanner(System.in);
+        String proceed = scan.next();
+        switch(proceed) {
+            case "да" :
+                return;
+            case "нет" :
+                System.out.println("Вычисления окончены");
+                break;
+            default :
+                System.out.println("Выбранный ответ некорректен. Введите да / нет");
+                return;
+        }
     }
 }

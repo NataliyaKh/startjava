@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class CalculatorTest {
     public static void main(String[] args) {
         Calculator calculatorOne = new Calculator();
+        String proceed;
         do {
             Scanner scan = new Scanner(System.in);
 
@@ -20,24 +21,9 @@ public class CalculatorTest {
             
             System.out.println(num1 + " " + operation + " " + num2 + " = " + calculatorOne.calculate());
             System.out.println("Хотите продолжить вычисления? да / нет ");
-            String proceed = scan.next();
+            proceed = scan.next();
             calculatorOne.setProceed(proceed);
             calculatorOne.isNext();
         } while (proceed != "нет");
-    }
-
-    public void isNext() {
-        Scanner scan = new Scanner(System.in);
-        String proceed = scan.next();
-        switch(proceed) {
-            case "да" :
-                return;
-            case "нет" :
-                System.out.println("Вычисления окончены");
-                break;
-            default :
-                System.out.println("Выбранный ответ некорректен. Введите да / нет");
-                return;
-        }
     }
 }
