@@ -6,14 +6,6 @@ public class Calculator {
     private char operation;
     public int result;
 
-    public int getResult() {
-        return result;
-    }
-
-    void setResult(int result) {
-        this.result = result;
-    }
-
     public int getNum1() {
         return num1;
     }

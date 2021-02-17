@@ -20,8 +20,18 @@ public class CalculatorTest {
             
             System.out.println(num1 + " " + operation + " " + num2 + " = " + calculatorOne.calculate());
             System.out.println("Хотите продолжить вычисления? да / нет ");
-            calculatorOne.offerProceed();
+            String proceed = scan.next();
+            calculatorOne.setProceed(proceed);
+            calculatorOne.isNext();
         } while (proceed != "нет");
+    }
+
+    public String getProceed() {
+        return proceed;
+    }
+
+    void setProceed(String proceed) {
+        this.proceed = proceed;
     }
 
     public void offerProceed() {
