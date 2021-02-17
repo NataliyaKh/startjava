@@ -34,7 +34,7 @@ public class CalculatorTest {
         this.proceed = proceed;
     }
 
-    public void offerProceed() {
+    public void isNext() {
         Scanner scan = new Scanner(System.in);
         String proceed = scan.next();
         switch(proceed) {
