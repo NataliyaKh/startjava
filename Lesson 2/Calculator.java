@@ -30,6 +30,14 @@ public class Calculator {
         this.operation = operation;
     }
 
+        public String getProceed() {
+        return proceed;
+    }
+
+    void setProceed(String proceed) {
+        this.proceed = proceed;
+    }
+
     public int calculate() {
         switch(operation) {
             case '+' : 

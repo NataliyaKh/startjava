@@ -26,14 +26,6 @@ public class CalculatorTest {
         } while (proceed != "нет");
     }
 
-    public String getProceed() {
-        return proceed;
-    }
-
-    void setProceed(String proceed) {
-        this.proceed = proceed;
-    }
-
     public void isNext() {
         Scanner scan = new Scanner(System.in);
         String proceed = scan.next();
