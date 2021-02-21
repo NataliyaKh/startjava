@@ -65,18 +65,20 @@ public int calculate() {
     }
 
     public void isNext(String proceed) {
-        boolean proceedValid; 
+        System.out.println("Хотите продолжить вычисления? да / нет ");
+        Scanner scan = new Scanner(System.in);
+        proceed = scan.next();
+        boolean next = ((proceed == "да")||(proceed == "нет"));
         do {
-            Scanner scan = new Scanner(System.in);
-            proceed = scan.next();
-            proceedValid = (proceed == "да")||(proceed == "нет");
-            System.out.println("Выбранный ответ некорректен. Введите да / нет");
-            if(proceed == "да") {
+            if(next = false) {
+                System.out.println("Выбранный ответ некорректен. Введите да / нет");
                 return;
-            } else {
-                System.out.println("Вычисления окончены");
-                break;
                 }
-            } while (proceedValid = false);
-    }
+            } while (next = false);
+        if(next = true) {
+            if (proceed == "нет") {
+                System.out.println("Вычисления окончены");
+                } else return;
+            }
+        }
 }
