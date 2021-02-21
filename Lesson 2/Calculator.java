@@ -68,13 +68,11 @@ public int calculate() {
         System.out.println("Хотите продолжить вычисления? да / нет ");
         Scanner scan = new Scanner(System.in);
         proceed = scan.next();
-        boolean next = ((proceed == "да")||(proceed == "нет"));
-        do {
-            if(next = false) {
-                System.out.println("Выбранный ответ некорректен. Введите да / нет");
-                return;
-                }
-            } while (next = false);
+        boolean next = (proceed == "да")||(proceed == "нет");
+        while (next = false) {
+            System.out.println("Выбранный ответ некорректен. Введите да / нет");
+            return;
+            }
         if(next = true) {
             if (proceed == "нет") {
                 System.out.println("Вычисления окончены");
