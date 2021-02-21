@@ -6,6 +6,7 @@ public class Calculator {
     private char operation;
     public int result;
     public String proceed;
+    public boolean next = true;
 
     public int getNum1() {
         return num1;
@@ -39,7 +40,7 @@ public class Calculator {
         this.proceed = proceed;
     }
 
-    public int calculate() {
+public int calculate() {
         switch(operation) {
             case '+' : 
                 return num1 + num2;
@@ -63,18 +64,19 @@ public class Calculator {
         return 0;
     }
 
-    public void isNext() {
-        Scanner scan = new Scanner(System.in);
-        String proceed = scan.next();
-        switch(proceed) {
-            case "да" :
+    public void isNext(String proceed) {
+        boolean proceedValid; 
+        do {
+            Scanner scan = new Scanner(System.in);
+            proceed = scan.next();
+            proceedValid = (proceed == "да")||(proceed == "нет");
+            System.out.println("Выбранный ответ некорректен. Введите да / нет");
+            if(proceed == "да") {
                 return;
-            case "нет" :
+            } else {
                 System.out.println("Вычисления окончены");
                 break;
-            default :
-                System.out.println("Выбранный ответ некорректен. Введите да / нет");
-                return;
-        }
+                }
+            } while (proceedValid = false);
     }
 }
