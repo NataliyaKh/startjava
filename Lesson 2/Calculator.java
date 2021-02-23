@@ -6,7 +6,7 @@ public class Calculator {
     private char operation;
     public int result;
     public String proceed;
-    public boolean proceedValid = (proceed == "да")|(proceed == "нет");
+    public boolean proceedValid = Boolean.valueOf((proceed == "да")|(proceed == "нет"));
 
     public int getNum1() {
         return num1;
