@@ -6,7 +6,7 @@ public class Calculator {
     private char operation;
     public int result;
     public String proceed;
-    public boolean next = true;
+    public boolean proceedValid = (proceed == "да")|(proceed == "нет");
 
     public int getNum1() {
         return num1;
@@ -53,8 +53,9 @@ public int calculate() {
             case '^' : 
                 result = 1;
                 for (int exponent = 1; exponent <= num2; exponent++) {
-                    return result *= num1;
-                }
+                    result = result * num1;
+                };
+                return result;
             case '%' : 
                 return num1 % num2;
             default : 
@@ -69,12 +70,12 @@ public int calculate() {
         Scanner scan = new Scanner(System.in);
         proceed = scan.next();
         scan.nextLine();
-        boolean next = (proceed == "да")||(proceed == "нет");
-        while (next = false) {
+        
+        while (proceedValid = false) {
             System.out.println("Выбранный ответ некорректен. Введите да / нет");
             return;
             }
-        if(next = true) {
+        if(proceedValid = true) {
             if (proceed == "нет") {
                 System.out.println("Вычисления окончены");
                 } else return;

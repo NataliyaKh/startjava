@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class CalculatorTest {
     public static void main(String[] args) {
         Calculator calculatorOne = new Calculator();
-        String proceed = "нет";
+        String proceed = "да";
         do {
             Scanner scan = new Scanner(System.in);
 
