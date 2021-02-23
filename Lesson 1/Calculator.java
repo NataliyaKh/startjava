@@ -16,7 +16,7 @@ public class Calculator {
         } else if(operation == '^') {
             result = 1;
             for (int exponent = 1; exponent <= num2; exponent++) {
-                result *= num1;
+                result = result * num1;
             }
         } else if(operation == '%') {
             result = num1 % num2;
