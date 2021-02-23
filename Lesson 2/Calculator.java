@@ -68,6 +68,7 @@ public int calculate() {
         System.out.println("Хотите продолжить вычисления? да / нет ");
         Scanner scan = new Scanner(System.in);
         proceed = scan.next();
+        scan.nextLine();
         boolean next = (proceed == "да")||(proceed == "нет");
         while (next = false) {
             System.out.println("Выбранный ответ некорректен. Введите да / нет");
