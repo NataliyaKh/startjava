@@ -1,12 +1,7 @@
-import java.util.Scanner;
-
 public class Calculator {
     private int num1;
     private int num2;
     private char operation;
-    public int result;
-    public String proceed;
-    public boolean proceedValid = (Boolean.valueOf(proceed == "да")|Boolean.valueOf(proceed == "нет"));
 
     public int getNum1() {
         return num1;
@@ -28,19 +23,11 @@ public class Calculator {
         return operation;
     }
 
-    void setOperation (char operation) {
+    void setOperation(char operation) {
         this.operation = operation;
     }
 
-        public String getProceed() {
-        return proceed;
-    }
-
-    void setProceed(String proceed) {
-        this.proceed = proceed;
-    }
-
-public int calculate() {
+    public int calculate() {
         switch(operation) {
             case '+' : 
                 return num1 + num2;
@@ -51,10 +38,10 @@ public int calculate() {
             case '/' : 
                 return num1 / num2;
             case '^' : 
-                result = 1;
+                int result = 1;
                 for (int exponent = 1; exponent <= num2; exponent++) {
-                    result = result * num1;
-                };
+                    result *= num1;
+                }
                 return result;
             case '%' : 
                 return num1 % num2;
@@ -64,21 +51,4 @@ public int calculate() {
             }
         return 0;
     }
-
-    public void isNext(String proceed) {
-        System.out.println("Хотите продолжить вычисления? да / нет ");
-        Scanner scan = new Scanner(System.in);
-        proceed = scan.next();
-        scan.nextLine();
-        
-        while (proceedValid = false) {
-            System.out.println("Выбранный ответ некорректен. Введите да / нет");
-            return;
-            }
-        if(proceedValid = true) {
-            if (proceed == "нет") {
-                System.out.println("Вычисления окончены");
-                } else return;
-            }
-        }
 }
