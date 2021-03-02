@@ -4,7 +4,6 @@ public class CalculatorTest {
     public static void main(String[] args) {
         Calculator calculatorOne = new Calculator();
         String answer = "да";
-        boolean answerValid = Boolean.valueOf(answer == "да")|Boolean.valueOf(answer == "нет");
 
         do {
             Scanner scan = new Scanner(System.in);
@@ -25,20 +24,21 @@ public class CalculatorTest {
         } while (isNext());
     }
 
-    public static void isNext(String answer) {
+    public boolean isNext(String answer) {
         System.out.println("Хотите продолжить вычисления? да / нет ");
         Scanner scan = new Scanner(System.in);
         answer = scan.next();
         scan.nextLine();
-        
-        while (CalculatorTest.answerValid = false) {
+        boolean answerValid = Boolean.valueOf(answer == "да")|Boolean.valueOf(answer == "нет");
+        while (CalculatorTest.answerValid == false) {
             System.out.println("Выбранный ответ некорректен. Введите да / нет");
+            answer = scan.next();
+            scan.nextLine();
             return;
-            }
-        if(CalculatorTest.answerValid = true) {
-            if (answer == "нет") {
+        }
+        if (answer == "нет") {
                 System.out.println("Вычисления окончены");
-                } else return;
-            }
+                }
+            return answer;
         }
 }
