@@ -24,21 +24,21 @@ public class CalculatorTest {
         } while (isNext());
     }
 
-    public boolean isNext(String answer) {
+    public static boolean isNext() {
         System.out.println("Хотите продолжить вычисления? да / нет ");
         Scanner scan = new Scanner(System.in);
-        answer = scan.next();
+        String answer = scan.next();
         scan.nextLine();
-        boolean answerValid = Boolean.valueOf(answer == "да")|Boolean.valueOf(answer == "нет");
-        while (CalculatorTest.answerValid == false) {
+        boolean answerValid = Boolean.valueOf(answer.equals("да"))|Boolean.valueOf(answer.equals("нет"));
+        while (answerValid == false) {
             System.out.println("Выбранный ответ некорректен. Введите да / нет");
             answer = scan.next();
             scan.nextLine();
-            return;
+            return answerValid;
         }
-        if (answer == "нет") {
+        if (answer.equals("нет")) {
                 System.out.println("Вычисления окончены");
                 }
-            return answer;
+            return answerValid;
         }
 }
