@@ -3,11 +3,8 @@ import java.util.Scanner;
 public class CalculatorTest {
     public static void main(String[] args) {
         Calculator calculatorOne = new Calculator();
-        String answer = "да";
-
+        Scanner scan = new Scanner(System.in);
         do {
-            Scanner scan = new Scanner(System.in);
-            
             System.out.println("Введите первое число: ");
             int num1 = scan.nextInt();
             calculatorOne.setNum1(num1);
@@ -26,19 +23,22 @@ public class CalculatorTest {
 
     public static boolean isNext() {
         System.out.println("Хотите продолжить вычисления? да / нет ");
+        String answer;
         Scanner scan = new Scanner(System.in);
-        String answer = scan.next();
+        answer = scan.next();
         scan.nextLine();
-        boolean answerValid = Boolean.valueOf(answer.equals("да"))|Boolean.valueOf(answer.equals("нет"));
-        while (answerValid == false) {
-            System.out.println("Выбранный ответ некорректен. Введите да / нет");
-            answer = scan.next();
-            scan.nextLine();
-            return answerValid;
-        }
-        if (answer.equals("нет")) {
-                System.out.println("Вычисления окончены");
+        if(answer.equals("нет")) {
+            System.out.println("Вычисления окончены");
+            return false;
+        } else {
+                while (!answer.equals("да")) {
+                    System.out.println("Выбранный ответ некорректен. Введите да / нет");
+                    String answer;
+                    answer = scan.next();
+                    scan.nextLine();
+                    return true;
+                    }
+                return true;
                 }
-            return answerValid;
-        }
+    }
 }
