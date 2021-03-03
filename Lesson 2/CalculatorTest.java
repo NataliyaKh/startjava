@@ -17,28 +17,25 @@ public class CalculatorTest {
             int num2 = scan.nextInt();
             calculatorOne.setNum2(num2);
             
-            System.out.println(num1 + " " + operation + " " + num2 + " = " + calculatorOne.calculate());
+            System.out.println(num1 + " " + operation + " " + num2 + " = " + calculatorOne.calculate() + "\n Хотите продолжить вычисления? да / нет " );
         } while (isNext());
+        System.out.println("Вычисления окончены");
     }
 
     public static boolean isNext() {
-        System.out.println("Хотите продолжить вычисления? да / нет ");
-        String answer;
         Scanner scan = new Scanner(System.in);
+        String answer;
         answer = scan.next();
         scan.nextLine();
+        do {
+            System.out.println("Выбранный ответ некорректен. Введите да / нет");
+            answer = scan.next();
+            scan.nextLine();
+        } while (!answer.equals("да")&!answer.equals("нет"));
         if(answer.equals("нет")) {
-            System.out.println("Вычисления окончены");
             return false;
         } else {
-                while (!answer.equals("да")) {
-                    System.out.println("Выбранный ответ некорректен. Введите да / нет");
-                    String answer;
-                    answer = scan.next();
-                    scan.nextLine();
-                    return true;
-                    }
-                return true;
-                }
+            return true;
+        }
     }
 }
