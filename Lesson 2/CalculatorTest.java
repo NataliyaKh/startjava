@@ -27,19 +27,15 @@ public class CalculatorTest {
         System.out.println("Вычисления окончены");
     }
 
-    public static boolean isNext() {
+    private static boolean isNext() {
         Scanner scan = new Scanner(System.in);
         String answer = scan.next();
         scan.nextLine();
-        while (!answer.equals("yes")&!answer.equals("no")) {
+        while (!answer.equals("yes") && !answer.equals("no")) {
            System.out.println("Выбранный ответ некорректен. Введите yes / no");
            answer = scan.next();
            scan.nextLine();
         }
-        if(answer.equals("no")) {
-            return false;
-        } else {
-           return true;
-        }
+        return answer.equals("yes");
     }
 }
