@@ -24,9 +24,7 @@ public class JaegerTest {
         jaegerOne.move();
         jaegerOne.scanKaiju();
         jaegerOne.useVortexCannon();
-    }
 
-    public static void jaegerTwo(String[] args) {
         Jaeger jaegerTwo = new Jaeger();
 
         jaegerTwo.setModelName("Crimson Typhoon");
