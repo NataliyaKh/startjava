@@ -1,4 +1,4 @@
-class Jaeger {
+public class Jaeger {
     String modelName;
     String mark;
     String origin;
@@ -8,7 +8,8 @@ class Jaeger {
     int strength;
     int armor;
 
-    public Jaeger (String modelName, String mark, String origin, float height, float weight, int speed, int strength, int armor) {
+    public Jaeger (String modelName, String mark, String origin,
+                    float height, float weight, int speed, int strength, int armor) {
         this.modelName = modelName;
         this.mark = mark;
         this.origin = origin;
@@ -17,11 +18,6 @@ class Jaeger {
         this.speed = speed;
         this.strength = strength;
         this.armor = armor;
-    }
-
-    @Override
-    public String toString() {
-        return String.format("modelName = %s \nmark = %s \norigin = %s \nheight = %f \nweight = %f \nspeed = %i \nstrength = %i \narmor = %i", modelName, mark, origin, height, weight, speed, strength, armor);
     }
 
     public boolean drift() {
