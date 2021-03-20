@@ -11,24 +11,31 @@ public class Jaeger {
     public String getModelName() {
         return modelName;
     }
+
     public String getMark() {
         return mark;
     }
+
     public String getOrigin() {
         return origin;
     }
+
     public float getHeight() {
         return height;
     }
+
     public float getWeight() {
         return weight;
     }
+
     public int getSpeed() {
         return speed;
     }
+
     public int getStrength() {
         return strength;
     }
+    
     public int getArmor() {
         return armor;
     }
