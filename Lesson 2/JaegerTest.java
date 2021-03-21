@@ -15,7 +15,7 @@ public class JaegerTest {
         jaegerOne.move();
         jaegerOne.scanKaiju();
         jaegerOne.useVortexCannon();
-        System.out.println("Jaeger Two: ");
+        System.out.println("\nJaeger Two: ");
         System.out.println("modelName = " + jaegerTwo.getModelName());
         System.out.println("mark = " + jaegerTwo.getMark());
         System.out.println("origin = " + jaegerTwo.getOrigin());
