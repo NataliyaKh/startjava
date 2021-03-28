@@ -1,6 +1,7 @@
 public class Player {
     String name;
     int guessNum;
+    boolean compare;
 
     public Player () {
         name = "";
@@ -19,10 +20,17 @@ public class Player {
         this.name = name;
     }
 
-    public int getGuessNum() {
+    public static int getGuessNum() {
         return guessNum;
     }
     void setGuessNum(int guessNum) {
         this.guessNum = guessNum;
+    }
+
+    public boolean getCompare() {
+        return compare;
+    }
+    void setCompare(boolean compare) {
+        this.compare = compare;
     }
 }

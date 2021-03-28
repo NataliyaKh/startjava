@@ -1,35 +1,36 @@
 import java.util.Scanner;
-import java.util.Random;
 
 public class GuessNumber {   
     public static void main(String[] args) {
-        Random number = new Random();
-        Scanner scan = new Scanner(System.in);
         Player playerOne = new Player();
         Player playerTwo = new Player();
+        Scanner scan = new Scanner(System.in, "Cp866");
+        RandomComputerNum computerNum = new RandomComputerNum();
+        GuessNumber game = new GuessNumber();
+        GuessNumber.compare();
         System.out.println("Угадайте число от 0 до 100!\n");
-        int computerNum = number.nextInt(100);
+        do {
+                System.out.println(playerOne.getName() + ", выберите число!");
+                int guessNum = scan.nextInt();
+                playerOne.setGuessNum(guessNum);
+                GuessNumber.compare();
+                if(compare()) {
+                    System.out.println(playerTwo.getName() + ", выберите число!");
+                    guessNum = scan.nextInt();
+                    playerTwo.setGuessNum(guessNum);
+                    GuessNumber.compare();
+                }
+            } while(GuessNumber.compare());
     }
 
-    public int getComputerNum() {
-        return computerNum;
-    }
-    void setComputerNum(int computerNum) {
-        this.computerNum = computerNum;
-    }
-
-    public boolean compare() {
-        if(Player.getGuessNum() > getComputerNum()) {
+    public static boolean compare() {
+        if(Player.getGuessNum() > RandomComputerNum.getComputerNum()) {
             System.out.println("Ваш вариант - " + Player.getGuessNum() + "\nВведённое вами число больше того, что загадал компьютер.\n");
-        } else if(Player.getGuessNum() < getComputerNum()) {
+        } else if(Player.getGuessNum() < RandomComputerNum.getComputerNum()) {
             System.out.println("Ваш вариант - " + Player.getGuessNum() + "\nВведённое вами число меньше того, что загадал компьютер.\n");
-        } else if(Player.getGuessNum() == getComputerNum()) {
+        } else if(Player.getGuessNum() == RandomComputerNum.getComputerNum()) {
             System.out.println("Ваш вариант - " + Player.getGuessNum() + "\nВы угадали!");
         }
-        return Player.getGuessNum() != getComputerNum();
-    }
-
-    public boolean getCompare() {
-        return compare;
+        return Player.getGuessNum() != RandomComputerNum.getComputerNum();
     }
 }

@@ -11,28 +11,15 @@ public class GuessNumberTest {
 
         Player playerTwo = new Player();
         System.out.println("Введите имя второго игрока: ");
-        String name = scan.next();
+        name = scan.next();
         scan.nextLine();
         playerTwo.setName(name);
 
         do {
-
-            do {
-                System.out.println(playerOne.getName() + ", выберите число!");
-                int guessNum1 = scan.nextInt();
-                playerOne.setGuessNum(guessNum1);
-                playerOne.getCompare();
-                if(compare()) {
-                    System.out.println(playerTwo.getName() + ", выберите число!");
-                    int guessNum2 = scan.nextInt();
-                    playerTwo.setGuessNum(guessNum2);
-                    playerTwo.getCompare();
-                }
-            } while(getCompare());
-            
+            GuessNumber.main();
         } while (isNext());
         scan.close();
-        System.out.println("Игра завершена");
+        System.out.println("Игра завершена.");
         }
 
     private static boolean isNext() {
@@ -47,7 +34,4 @@ public class GuessNumberTest {
         }
         return answer.equals("yes");
     }
-
-
-
 }
