@@ -16,7 +16,7 @@ public class GuessNumberTest {
         playerTwo.setName(name);
 
         do {
-            GuessNumber.main();
+            GuessNumber.attempt();
         } while (isNext());
         scan.close();
         System.out.println("Игра завершена.");

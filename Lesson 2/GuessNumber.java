@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class GuessNumber {   
-    public static void main(String[] args) {
+    public static void attempt() {
         Player playerOne = new Player();
         Player playerTwo = new Player();
         Scanner scan = new Scanner(System.in, "Cp866");

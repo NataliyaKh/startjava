@@ -1,6 +1,6 @@
 public class Player {
     String name;
-    int guessNum;
+    static int guessNum;
     boolean compare;
 
     public Player () {
